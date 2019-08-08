@@ -7,7 +7,8 @@ while camera_feed.isOpened():
     frameIsAvailable, current_frame = camera_feed.read()
 
     if frameIsAvailable:
-        cv2.cv2.imshow("Camera feed", current_frame)
+        grey_scale = cv2.cv2.cvtColor(current_frame, cv2.cv2.COLOR_BGR2GRAY)
+        cv2.cv2.imshow("Camera feed", grey_scale)
 
         if cv2.cv2.waitKey(1) & 0xFF == 27:
             break
