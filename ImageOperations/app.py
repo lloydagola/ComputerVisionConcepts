@@ -8,7 +8,7 @@ print(picture.dtype)    #returns Image datatype obtained
 
 
 blue, green, red = cv2.cv2.split(picture)
-print(b)
+picture = cv2.cv2.merge((blue, green, red))
 
 cv2.cv2.imshow("Result", picture)
 
