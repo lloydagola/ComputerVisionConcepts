@@ -1,11 +1,9 @@
 import cv2
 
 cameraFeed = cv2.cv2.VideoCapture(0)
-print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_WIDTH))
-print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT))
 
-cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_WIDTH, 500)
-cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_HEIGHT, 500)
+cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_HEIGHT, 720)
 print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_WIDTH))
 print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT))
 
