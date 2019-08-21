@@ -4,6 +4,11 @@ cameraFeed = cv2.cv2.VideoCapture(0)
 print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_WIDTH))
 print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT))
 
+cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_WIDTH, 500)
+cameraFeed.set(cv2.cv2.CAP_PROP_FRAME_HEIGHT, 500)
+print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_WIDTH))
+print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT))
+
 while(cameraFeed.isOpened()):
     frame_is_available, currentFrame = cameraFeed.read()
 
