@@ -6,7 +6,7 @@ camera_feed = cv2.cv2.VideoCapture(0)
 fourcc = cv2.cv2.VideoWriter_fourcc(*"XVID")
 output = cv2.cv2.VideoWriter("output.avi", fourcc, 24.0, (640, 480))
 
-while camera_feed.isOpened():
+while (camera_feed.isOpened()):
     frameIsAvailable, current_frame = camera_feed.read()
 
     if frameIsAvailable:
