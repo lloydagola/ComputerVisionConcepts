@@ -1,6 +1,8 @@
 import cv2
 
 cameraFeed = cv2.cv2.VideoCapture(0)
+print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_WIDTH))
+print(cameraFeed.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT))
 
 while(cameraFeed.isOpened()):
     frame_is_available, currentFrame = cameraFeed.read()
@@ -13,7 +15,7 @@ while(cameraFeed.isOpened()):
             break
     
     else:
-        break;
+        break
   
 cameraFeed.release()
 cv2.cv2.destroyAllWindows()
