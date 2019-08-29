@@ -4,6 +4,8 @@ import numpy as np
 def print_value(value):
     print(value)
 
+video = cv2.cv2.VideoCapture(0)
+
 cv2.cv2.namedWindow("Tracking")
 cv2.cv2.createTrackbar("HueFloor", "Tracking", 0, 255, print_value)
 cv2.cv2.createTrackbar("SaturationFloor", "Tracking", 0, 255, print_value)
@@ -13,7 +15,7 @@ cv2.cv2.createTrackbar("SaturationCeiling", "Tracking", 255, 255, print_value)
 cv2.cv2.createTrackbar("ValueCeiling", "Tracking", 255, 255, print_value)
 
 while True:
-    frame = cv2.cv2.imread("colored_balls.jpg")
+    _,frame = video.read()
 
     hsvImage = cv2.cv2.cvtColor(frame, cv2.cv2.COLOR_BGR2HSV)
 
@@ -39,4 +41,5 @@ while True:
     if cv2.cv2.waitKey(1) & 0xFF == 27:
         break
 
+video.release()
 cv2.cv2.destroyAllWindows()
