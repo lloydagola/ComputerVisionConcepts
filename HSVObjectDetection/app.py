@@ -1,16 +1,16 @@
 import cv2
 import numpy as np
 
-def do_stuff():
-    pass
+def print_value(value):
+    print(value)
 
 cv2.cv2.namedWindow("Tracking")
-cv2.cv2.createTrackbar("HueFloor", "Tracking", 0, 255, do_stuff)
-cv2.cv2.createTrackbar("SaturationFloor", "Tracking", 0, 255, do_stuff)
-cv2.cv2.createTrackbar("ValueFloor", "Tracking", 0, 255, do_stuff)
-cv2.cv2.createTrackbar("HueCeiling", "Tracking", 255, 255, do_stuff)
-cv2.cv2.createTrackbar("SaturationCeiling", "Tracking", 255, 255, do_stuff)
-cv2.cv2.createTrackbar("ValueCeiling", "Tracking", 255, 255, do_stuff)
+cv2.cv2.createTrackbar("HueFloor", "Tracking", 0, 255, print_value)
+cv2.cv2.createTrackbar("SaturationFloor", "Tracking", 0, 255, print_value)
+cv2.cv2.createTrackbar("ValueFloor", "Tracking", 0, 255, print_value)
+cv2.cv2.createTrackbar("HueCeiling", "Tracking", 255, 255, print_value)
+cv2.cv2.createTrackbar("SaturationCeiling", "Tracking", 255, 255, print_value)
+cv2.cv2.createTrackbar("ValueCeiling", "Tracking", 255, 255, print_value)
 
 while True:
     frame = cv2.cv2.imread("colored_balls.jpg")
