@@ -6,7 +6,7 @@ original_image = cv2.cv2.imread("colored_balls.jpg", cv2.cv2.IMREAD_GRAYSCALE)
 _, mask = cv2.cv2.threshold(original_image, 220, 255, cv2.cv2.THRESH_BINARY_INV)
 
 kernal = numpy.ones((2,2), numpy.uint8)
-dilation = cv2.cv2.dilate(mask, kernal)
+dilation = cv2.cv2.dilate(mask, kernal, iterations=2)
 
 titles = ['image', 'mask', 'dilation']
 images = [original_image, mask, dilation]
